@@ -9,9 +9,11 @@ You can download and use this file at your own risk.
 
 You need to have the
 [opnsensefilter](https://github.com/fabianfrz/logstash-filter-opnsensefilter)
-plugin installed in your logstash for this to work. Run the following command 
+plugin installed in your logstash for this to work. Run the following command
 on your Logstash host:
-```
+
+```sh
 logstash-plugin install logstash-filter-opnsensefilter
 ```
+
 Once it is installed, (re)start Logstash.

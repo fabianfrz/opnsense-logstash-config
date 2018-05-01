@@ -1,0 +1,15 @@
+<134>May  1 10:23:43 filterlog: 112,,,0,lagg0_vlan2342,match,block,in,4,0x0,,64,16940,0,DF,17,udp,58,192.0.2.23,192.0.2.42,2069,53,38
+<134>May  1 15:11:01 filterlog: 112,,,0,em0,match,block,in,4,0xc0,,1,0,0,DF,2,igmp,36,192.0.2.50,224.0.0.1,datalength=12 
+<134>May  1 15:11:01 filterlog: 112,,,0,em0,match,block,in,4,0xc0,,1,0,0,DF,2,igmp,36,8.8.8.8,193.99.144.80,datalength=12 
+<46>May  1 15:11:17 syslogd: restart
+<13>May  1 15:11:18 configd.py: [20f611a8-8970-47be-9bac-611a1441f23a] request filter log output
+<14>May  1 15:11:19 devd: Processing event '!system=CAM subsystem=periph type=error device=cd0 serial="QM00001" cam_status="0xcc" scsi_status=2 scsi_sense="70 02 3a 00" CDB="00 00 00 00 00 00 " '
+<15>May  1 15:11:19 devd: Pushing table
+<15>May  1 15:11:19 devd: Processing notify event
+<15>May  1 15:11:19 devd: Popping table
+<117>May  1 15:11:19 sshlockout[17026]: sshlockout/webConfigurator v3.0 starting up
+<190>May  1 16:01:35 dhcpd: DHCPDISCOVER from 52:54:00:23:42:ff via lagg0_vlan2342
+<190>May  1 16:01:36 dhcpd: DHCPOFFER on 192.0.2.5 to 52:54:00:23:42:ff via lagg0_vlan2342
+<190>May  1 15:28:11 dhcpd: DHCPREQUEST for 192.0.2.6 from 52:54:00:23:42:ff via vtnet1
+<190>May  1 16:01:36 dhcpd: DHCPREQUEST for 192.0.2.5 (172.29.96.1) from 52:54:00:23:42:ff via lagg0_vlan2342
+<190>May  1 15:28:11 dhcpd: DHCPACK on 192.0.2.6 to 52:54:00:23:42:ff via vtnet1

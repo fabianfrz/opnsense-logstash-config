@@ -1,0 +1,246 @@
+{
+  "#dst_hostname": "192.0.2.42",
+  "#logstash_host": "gnu.example.com",
+  "#source": "network-firewall",
+  "#src_hostname": "192.0.2.23",
+  "@timestamp": "2023-05-23T23:23:23.555Z",
+  "action": "block",
+  "aid": 16940,
+  "direction_of_traffic": "in",
+  "dst_ip": "192.0.2.42",
+  "dst_ip_geo": {},
+  "dst_port": 53,
+  "ecn": "",
+  "flags": "DF",
+  "hop_limit": 64,
+  "host": "logs",
+  "ip_version": 4,
+  "myoffset": 0,
+  "protocol": "udp",
+  "protocol_id": 17,
+  "reason": "match",
+  "rule": 112,
+  "sent_byte": 38,
+  "severity": 6,
+  "src_interface": "int_logs",
+  "src_ip": "192.0.2.23",
+  "src_ip_geo": {},
+  "src_port": 2069,
+  "subrule": 0,
+  "syslog_facility": "local0",
+  "syslog_program": "filterlog",
+  "syslog_timestamp": "May  1 10:23:43",
+  "tags": [
+    "_geoip_lookup_failure"
+  ],
+  "tos": 0
+}
+{
+  "#dst_hostname": "224.0.0.1",
+  "#logstash_host": "gnu.example.com",
+  "#source": "network-firewall",
+  "#src_hostname": "192.0.2.50",
+  "@timestamp": "2023-05-23T23:23:23.555Z",
+  "action": "block",
+  "aid": 0,
+  "direction_of_traffic": "in",
+  "dst_ip": "224.0.0.1",
+  "dst_ip_geo": {},
+  "ecn": "",
+  "flags": "DF",
+  "hop_limit": 1,
+  "host": "logs",
+  "ip_version": 4,
+  "myoffset": 0,
+  "protocol": "igmp",
+  "protocol_id": 2,
+  "reason": "match",
+  "rule": 112,
+  "sent_byte": 36,
+  "severity": 6,
+  "src_interface": "wan",
+  "src_ip": "192.0.2.50",
+  "src_ip_geo": {},
+  "subrule": 0,
+  "syslog_facility": "local0",
+  "syslog_program": "filterlog",
+  "syslog_timestamp": "May  1 15:11:01",
+  "tags": [
+    "_geoip_lookup_failure"
+  ],
+  "tos": 192
+}
+{
+  "#dst_hostname": "193.99.144.80",
+  "#logstash_host": "gnu.example.com",
+  "#source": "network-firewall",
+  "#src_hostname": "8.8.8.8",
+  "@timestamp": "2023-05-23T23:23:23.555Z",
+  "action": "block",
+  "aid": 0,
+  "direction_of_traffic": "in",
+  "dst_ip": "193.99.144.80",
+  "dst_ip_geo": {
+    "city_name": "Hanover",
+    "continent_code": "EU",
+    "country_code3": "DE",
+    "country_name": "Germany",
+    "location": {
+      "lat": 52.3425,
+      "lon": 9.7153
+    }
+  },
+  "ecn": "",
+  "flags": "DF",
+  "hop_limit": 1,
+  "host": "logs",
+  "ip_version": 4,
+  "myoffset": 0,
+  "protocol": "igmp",
+  "protocol_id": 2,
+  "reason": "match",
+  "rule": 112,
+  "sent_byte": 36,
+  "severity": 6,
+  "src_interface": "wan",
+  "src_ip": "8.8.8.8",
+  "src_ip_geo": {
+    "continent_code": "NA",
+    "country_code3": "US",
+    "country_name": "United States",
+    "location": {
+      "lat": 37.751,
+      "lon": -97.822
+    }
+  },
+  "subrule": 0,
+  "syslog_facility": "local0",
+  "syslog_program": "filterlog",
+  "syslog_timestamp": "May  1 15:11:01",
+  "tos": 192
+}
+{
+  "#logstash_host": "gnu.example.com",
+  "#source": "network-firewall",
+  "@timestamp": "2023-05-23T23:23:23.555Z",
+  "host": "logs",
+  "severity": 6,
+  "syslog_facility": "syslogd",
+  "syslog_message": "restart",
+  "syslog_program": "syslogd",
+  "syslog_timestamp": "May  1 15:11:17"
+}
+{
+  "#logstash_host": "gnu.example.com",
+  "#source": "network-firewall",
+  "@timestamp": "2023-05-23T23:23:23.555Z",
+  "host": "logs",
+  "msg": "request filter log output",
+  "severity": 5,
+  "syslog_facility": "user-level",
+  "syslog_program": "configd.py",
+  "syslog_timestamp": "May  1 15:11:18",
+  "uuid": "20f611a8-8970-47be-9bac-611a1441f23a"
+}
+{
+  "#logstash_host": "gnu.example.com",
+  "#source": "network-firewall",
+  "@timestamp": "2023-05-23T23:23:23.555Z",
+  "host": "logs",
+  "severity": 5,
+  "syslog_facility": "log alert",
+  "syslog_message": "sshlockout/webConfigurator v3.0 starting up",
+  "syslog_pid": "17026",
+  "syslog_program": "sshlockout",
+  "syslog_timestamp": "May  1 15:11:19"
+}
+{
+  "#logstash_host": "gnu.example.com",
+  "#source": "network-firewall",
+  "@timestamp": "2023-05-23T23:23:23.555Z",
+  "host": "logs",
+  "msg": "DHCPDISCOVER",
+  "severity": 6,
+  "src_interface": "int_logs",
+  "src_mac": "52:54:00:23:42:ff",
+  "syslog_facility": "local7",
+  "syslog_program": "dhcpd",
+  "syslog_timestamp": "May  1 16:01:35"
+}
+{
+  "#logstash_host": "gnu.example.com",
+  "#source": "network-firewall",
+  "#src_hostname": "192.0.2.5",
+  "@timestamp": "2023-05-23T23:23:23.555Z",
+  "host": "logs",
+  "msg": "DHCPOFFER",
+  "severity": 6,
+  "src_interface": "int_logs",
+  "src_ip": "192.0.2.5",
+  "src_ip_geo": {},
+  "src_mac": "52:54:00:23:42:ff",
+  "syslog_facility": "local7",
+  "syslog_program": "dhcpd",
+  "syslog_timestamp": "May  1 16:01:36",
+  "tags": [
+    "_geoip_lookup_failure"
+  ]
+}
+{
+  "#logstash_host": "gnu.example.com",
+  "#source": "network-firewall",
+  "#src_hostname": "192.0.2.6",
+  "@timestamp": "2023-05-23T23:23:23.555Z",
+  "host": "logs",
+  "msg": "DHCPREQUEST",
+  "severity": 6,
+  "src_interface": "vtnet1",
+  "src_ip": "192.0.2.6",
+  "src_ip_geo": {},
+  "src_mac": "52:54:00:23:42:ff",
+  "syslog_facility": "local7",
+  "syslog_program": "dhcpd",
+  "syslog_timestamp": "May  1 15:28:11",
+  "tags": [
+    "_geoip_lookup_failure"
+  ]
+}
+{
+  "#logstash_host": "gnu.example.com",
+  "#source": "network-firewall",
+  "#src_hostname": "192.0.2.5",
+  "@timestamp": "2023-05-23T23:23:23.555Z",
+  "dhcp_relay_ip": "172.29.96.1",
+  "host": "logs",
+  "msg": "DHCPREQUEST",
+  "severity": 6,
+  "src_interface": "int_logs",
+  "src_ip": "192.0.2.5",
+  "src_ip_geo": {},
+  "src_mac": "52:54:00:23:42:ff",
+  "syslog_facility": "local7",
+  "syslog_program": "dhcpd",
+  "syslog_timestamp": "May  1 16:01:36",
+  "tags": [
+    "_geoip_lookup_failure"
+  ]
+}
+{
+  "#logstash_host": "gnu.example.com",
+  "#source": "network-firewall",
+  "#src_hostname": "192.0.2.6",
+  "@timestamp": "2023-05-23T23:23:23.555Z",
+  "host": "logs",
+  "msg": "DHCPACK",
+  "severity": 6,
+  "src_interface": "vtnet1",
+  "src_ip": "192.0.2.6",
+  "src_ip_geo": {},
+  "src_mac": "52:54:00:23:42:ff",
+  "syslog_facility": "local7",
+  "syslog_program": "dhcpd",
+  "syslog_timestamp": "May  1 15:28:11",
+  "tags": [
+    "_geoip_lookup_failure"
+  ]
+}

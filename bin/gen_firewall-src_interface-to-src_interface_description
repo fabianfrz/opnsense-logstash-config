@@ -1,0 +1,92 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# Copyright (C) 2018 Robin Schneider <ypid@riseup.net>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, version 3 of the
+# License.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+"""
+Parse a backup XML file from OPNsense/pfSense and output a OS interface name to description YAML mapping.
+This is useful for example to use with the translate filter plugin for Logstash.
+"""
+
+from __future__ import print_function, unicode_literals, absolute_import, division
+
+__license__ = 'AGPL-3.0'
+__author__ = 'Robin Schneider <ypid@riseup.net>'
+__version__ = '0.5.0'
+
+import logging
+
+import xml.etree.ElementTree as ET
+import yaml
+
+
+def get_interface_bsd_to_description_mapping(tree):
+    mapping = {}
+
+    interfaces = tree.getroot().find('interfaces')
+
+    for interface in interfaces:
+        #  interface_opnsense_name = interface.tag
+        interface_bsd_name = interface.find('if').text
+        interface_description = interface.find('descr').text
+        mapping[interface_bsd_name] = interface_description
+
+    return mapping
+
+
+if __name__ == '__main__':
+    from argparse import ArgumentParser
+
+    # Script Arguments {{{
+    args_parser = ArgumentParser(
+        description=__doc__,
+        # epilog=__doc__,
+    )
+    args_parser.add_argument(
+        '-V', '--version',
+        action='version',
+        version='%(prog)s {version}'.format(version=__version__)
+    )
+    args_parser.add_argument(
+        '-d', '--debug',
+        help="Print lots of debugging statements.",
+        action='store_const',
+        dest='loglevel',
+        const=logging.DEBUG,
+        default=logging.WARNING,
+    )
+    args_parser.add_argument(
+        '-v', '--verbose',
+        help="Be verbose.",
+        action='store_const',
+        dest='loglevel',
+        const=logging.INFO,
+    )
+    args_parser.add_argument(
+        '-f', '--file',
+        help="Field name where to look for Logstash tags.",
+        required=True,
+    )
+    args = args_parser.parse_args()
+    logger = logging.getLogger(__file__)
+    logging.basicConfig(
+        format='%(levelname)s: %(message)s',
+        level=args.loglevel,
+    )
+
+    tree = ET.parse(args.file)
+    mapping = get_interface_bsd_to_description_mapping(tree)
+    print('---\n')
+    print(yaml.dump(mapping))

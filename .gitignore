@@ -1,0 +1,9 @@
+tmp_data
+
+conf.d/*autogen*.conf
+output_bulk/
+output_archive/
+output_bulk/
+output_all/
+
+ls_etc_local_restore/

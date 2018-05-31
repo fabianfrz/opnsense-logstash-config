@@ -15,3 +15,7 @@ on your Logstash host:
 logstash-plugin install logstash-filter-opnsensefilter
 ```
 Once it is installed, (re)start Logstash.
+
+
+## Forks
+* [ypid/opnsense-logstash-config](https://github.com/ypid/opnsense-logstash-config)

@@ -23,3 +23,6 @@ elasticsearch-plugin install ingest-geoip
 ```
 
 Once it is installed, (re)start Logstash or Elasticsearch, respectively.
+
+## Forks
+* [ypid/opnsense-logstash-config](https://github.com/ypid/opnsense-logstash-config)
